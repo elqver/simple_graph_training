@@ -2,7 +2,7 @@ TASK_NAME ?=
 
 
 TASK_DIR := task_$(TASK_NAME)
-SOURCE_FILE := $(TASK_DIR)/source_$(TASK_NAME).cpp
+SOURCE_FILE := $(TASK_DIR)/source.cpp
 TESTS_DIR := $(TASK_DIR)/tests
 
 
@@ -24,7 +24,7 @@ create_source_files: create_dirs check_task_selected
 
 
 create_test_files: create_dirs check_task_selected
-	cp template_test_.py $(TESTS_DIR)/test_$(TASK_NAME).py
+	cp template_test_.py $(TESTS_DIR)/test_via_subprocess.py
 
 create_invoke_file: create_dirs check_task_selected
 	cp invoke_template.py $(TASK_DIR)/tasks.py

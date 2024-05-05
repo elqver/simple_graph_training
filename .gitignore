@@ -1,5 +1,7 @@
 *.o
 *.out
 
+tmp.py
+
 __pycache__/
 
